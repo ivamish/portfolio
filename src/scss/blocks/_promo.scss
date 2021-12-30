@@ -1,0 +1,23 @@
+.promo{
+    height: 100vh;
+    background: url("../images/background.jpg") no-repeat 50%/cover;
+    padding: 206px 0 362px 0;
+    &__text{
+        width: 532px;
+    }
+    &__btns{
+        width: 286px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 38px;
+    }
+    &__title{
+        margin-left: 10px;
+        margin-bottom: 10px;
+        position: relative;
+        z-index: 2;
+        &::before{
+            @include round-title;
+        }
+    }
+}

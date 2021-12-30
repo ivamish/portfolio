@@ -1,0 +1,103 @@
+.hamburger{
+    height: 21px;
+    width: 36px;
+    span{
+        width: 30px;
+        height: 3px;
+        display: block;
+        background: #151812;
+        &.hamburger__long{
+            width: 36px;
+        }
+        transition: all .6s;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: absolute;
+    z-index: 100;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+    &:hover{
+        span{
+            background-color: $base-color;
+        }
+    }
+}
+
+.menu{
+    &__block{
+        width: 345px;
+        height: 100vh;
+        padding: 140px 0 0 75px;
+        background-color: $base-color;
+        position: fixed;
+        left: -100%;
+        z-index: 102;
+        transition: all .6s;
+    }
+    &__close{
+        position: absolute;
+        right: 25px;
+        top: 25px;
+        cursor: pointer;
+    }
+    &__list{
+        list-style-type: none;
+    }
+    &__item{
+        margin-bottom: 15px;
+        position: relative;
+        &::before{
+            content: '';
+            display: block;
+            width: 15px;
+            height: 15px;
+            border: 1px solid #000000;
+            box-sizing: border-box;
+            border-radius: 100%;
+            position: absolute;
+            top: 10px;
+            left: -35px;
+        }
+    }
+    &__link{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 36px;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+    &__socials{
+        width: 90px;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 50px;
+        left: calc(50% - 45px);
+        &-item{
+            cursor: pointer;
+        }
+    }
+    &__overlay{
+        width: 100%;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0);
+        position: fixed;
+        z-index: 101;
+        visibility: hidden;
+        transition: all .6s;
+    }
+    &.active{
+        .menu__overlay{
+            visibility: visible;
+            background: rgba(255, 255, 255, 0.75);
+        }
+        .menu__block{
+            left: 0;
+        }
+    }
+}

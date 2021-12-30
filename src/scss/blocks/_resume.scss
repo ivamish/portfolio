@@ -1,0 +1,83 @@
+.resume{
+    padding-top: 126px;
+    &__grid{
+        display: grid;
+        padding: 60px 136px 0 136px;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 120px;
+        &-column{
+            list-style-type: none;
+            position: relative;
+            &-title{
+                margin-bottom: 45px;
+                position: relative;
+                &::before{
+                    content: '';
+                    display: block;
+                    width: 15px;
+                    height: 15px;
+                    background: $base-color;
+                    border-radius: 100%;
+                    position: absolute;
+                    left: -50px;
+                    top: 4px;
+                    z-index: 2;
+                }
+            }
+        }
+        &-item{
+            margin-bottom: 45px;
+            position: relative;
+            &-header{
+                display: flex;
+                align-items: center;
+                padding-left: 10px;
+                position: relative;
+                &-subtitle{
+                    font-size: 12px;
+                    line-height: 18px;
+                }
+                &::before{
+                    content: '';
+                    display: block;
+                    width: 40px;
+                    height: 1px;
+                    background-color: #000;
+                    position: absolute;
+                    left: -43px;
+                }
+            }
+            &-icon{
+                position: relative;
+                &::before{
+                    @include round-title;
+                    top: -18px;
+                }
+                img{
+                    position: absolute;
+                    top: -9px;
+                    right: -26px;
+                }
+            }
+            &-info{
+                margin-left: 40px;
+            }
+            &-body{
+                font-size: 12px;
+                line-height: 18px;
+                margin-top: 12px;
+            }
+            &::before{
+                content: "";
+                display: block;
+                width: 1px;
+                height: calc(100% + 45px);
+                background-color: #000;
+                position: absolute;
+                left: -43px;
+                top: -51px;
+                z-index: 1;
+            }
+        }
+    }
+}

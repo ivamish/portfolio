@@ -1,0 +1,12 @@
+.btn{
+    padding: 12px 26px;
+    background-color: $base-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    color: #000000;
+    font-weight: 700;
+    &--transparent{
+        background-color: transparent;
+        box-shadow: none;
+    }
+}

@@ -1,0 +1,28 @@
+.aside{
+    width: 338px;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: rotate(-90deg) translateY(-140px);
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    &__define{
+        width: 70px;
+        height: 1px;
+        background-color: black;
+    }
+    &__socials{
+        width: 90px;
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        img{
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

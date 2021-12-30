@@ -1,0 +1,39 @@
+.title{
+    font-size: 16px;
+    &--fz48{
+        font-size: 48px;
+        line-height: 60px;
+    }
+    &--fz36{
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 60px;
+    }
+    &--fz14{
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: bold;
+    }
+    &--fz16{
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    &--section-title{
+        text-align: center;
+        position: relative;
+        &::before{
+            @include round-title;
+            left: calc(50% - 18px);
+        }
+    }
+    &--section-subtitle{
+        text-align: center;
+        margin-top: 6px;
+        &::after{
+            @include define-title;
+            margin: 0 auto;
+            margin-top: 25px;
+        }
+    }
+}
