@@ -36,4 +36,17 @@
             margin-top: 25px;
         }
     }
+    &--section-title-left{
+        position: relative;
+        margin-left: 10px;
+        &::before{
+            @include round-title;
+        }
+    }
+    &--section-subtitle-left{
+        margin-top: 6px;
+        &::after{
+            @include define-title;
+        }
+    }
 }

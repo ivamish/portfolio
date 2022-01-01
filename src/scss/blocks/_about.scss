@@ -21,19 +21,6 @@
         line-height: 21px;
         margin-top: 20px;
     }
-    &__title16{
-        position: relative;
-        margin-left: 10px;
-        &::before{
-            @include round-title;
-        }
-    }
-    &__title36{
-        margin-top: 6px;
-        &::after{
-            @include define-title;
-        }
-    }
     &__skills{
         display: flex;
         justify-content: space-between;
